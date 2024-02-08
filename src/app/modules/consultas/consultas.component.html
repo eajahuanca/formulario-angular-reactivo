@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+            <h2><b>Formulario reportes</b></h2>
+        </div>
+    </div>
+    <div class="row">
+        <form [formGroup]="formConsulta" class="px-10">
+            <div class="row borde">
+                <div class="col-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Fecha Inicial</mat-label>
+                        <input matInput formControlName="fecha_inicial" [matDatepicker]="picker_fi"/>
+                        <mat-datepicker-toggle matPrefix [for]="picker_fi"></mat-datepicker-toggle>
+                        <mat-datepicker #picker_fi></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Fecha Final</mat-label>
+                        <input matInput formControlName="fecha_final" [matDatepicker]="picker_ff"/>
+                        <mat-datepicker-toggle matPrefix [for]="picker_ff"></mat-datepicker-toggle>
+                        <mat-datepicker #picker_ff></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Adm. Distribuidor</mat-label>
+                        <mat-icon matPrefix>assignment</mat-icon>
+                        <mat-select formControlName="admin_distribuidor" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataAdmin" [value]="i.id">{{i.denominacion}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>  
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Cajero</mat-label>
+                        <mat-icon matPrefix>person</mat-icon>
+                        <mat-select formControlName="cajero" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataCajero" [value]="i.id">{{i.cajero}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Tipo de Pago</mat-label>
+                        <mat-icon matPrefix>work</mat-icon>
+                        <mat-select formControlName="tipo_pago" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataTipoPago" [value]="i.id">{{i.tipopago}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Estatus</mat-label>
+                        <mat-icon matPrefix>work</mat-icon>
+                        <mat-select formControlName="estatus" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataStatus" [value]="i.id">{{i.status}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Plataforma</mat-label>
+                        <mat-icon matPrefix>work</mat-icon>
+                        <mat-select formControlName="plataforma" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataPlataforma" [value]="i.id">{{i.plataforma}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Concepto</mat-label>
+                        <mat-icon matPrefix>work</mat-icon>
+                        <mat-select formControlName="concepto" placeholder="Todos">
+                            <mat-option *ngFor="let i of dataConcepto" [value]="i.id">{{i.denominacion}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4">
+                    <button mat-fab extended color="warn" class="px-4" type="button" (click)="accionClickConsultar()">
+                        <mat-icon>playlist_add_check</mat-icon>
+                        Consultar datos
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                    <h2>Resultado </h2>
+                    {{formConsulta.value | json}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

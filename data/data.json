@@ -1,0 +1,38 @@
+{
+    "administradores": [
+        { "id": 1, "denominacion": "admin 1" },
+        { "id": 2, "denominacion": "admin 2" },
+        { "id": 3, "denominacion": "admin 3" },
+        { "id": 4, "denominacion": "admin 4" }
+    ],
+    "cajero": [
+        { "id": 1, "cajero": "cajero 1" },
+        { "id": 2, "cajero": "cajero 2" },
+        { "id": 3, "cajero": "cajero 3" },
+        { "id": 4, "cajero": "cajero 4" }
+    ],
+    "tipopago": [
+        { "id": 1, "tipopago": "tipopago 1" },
+        { "id": 2, "tipopago": "tipopago 2" },
+        { "id": 3, "tipopago": "tipopago 3" },
+        { "id": 4, "tipopago": "tipopago 4" }
+    ],
+    "status": [
+        { "id": 1, "status": "status 1" },
+        { "id": 2, "status": "status 2" },
+        { "id": 3, "status": "status 3" },
+        { "id": 4, "status": "status 4" }
+    ],
+    "plataforma": [
+        { "id": 1, "plataforma": "plataforma 1" }, 
+        { "id": 2, "plataforma": "plataforma 2" }, 
+        { "id": 3, "plataforma": "plataforma 3" }, 
+        { "id": 4, "plataforma": "plataforma 4" } 
+    ],
+    "concepto": [
+        { "id": 1, "denominacion": "concepto 1" },
+        { "id": 2, "denominacion": "concepto 2" },
+        { "id": 3, "denominacion": "concepto 3" },
+        { "id": 4, "denominacion": "concepto 4" }
+    ]
+}
